@@ -1,0 +1,89 @@
+@import 'vars';
+
+@each $size-name, $size-value in $type-scale {
+	.#{$size-name}{
+	  font-size: $size-value;
+	}
+}
+
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+	@media (min-width: $breakpoint-value){
+		@each $size-name, $size-value in $type-scale {
+			.#{$size-name}--#{$breakpoint-name} {
+				font-size: $size-value;
+			}
+		}
+	}
+}
+
+.tl {
+	text-align: left;
+}
+
+.tc {
+	text-align: center;
+}
+
+.tr {
+	text-align: right;
+}
+
+.tj {
+	text-align: justify;
+}
+
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+	@media (min-width: $breakpoint-value){
+		.tl--#{$breakpoint-name} {
+			text-align: left;
+		}
+
+		.tc--#{$breakpoint-name} {
+			text-align: center;
+		}
+
+		.tr--#{$breakpoint-name} {
+			text-align: right;
+		}
+
+		.tj--#{$breakpoint-name} {
+			text-align: justify;
+		}
+	}
+}
+
+.t-sans {
+	font-family: $font-sans;
+}
+
+.t-serif {
+	font-family: $font-serif;
+}
+
+.t-mono {
+	font-family: $font-mono;
+}
+
+.t-up {
+	text-transform: uppercase;	
+}
+
+.t-low {
+	text-transform: lowercase;
+}
+
+.t-cap {
+	text-transform: capitalize;
+}
+
+.t-und {
+	text-decoration: underline;
+}
+
+.t-nund {
+	text-decoration: none;
+}
+
+.t-thru {
+	text-decoration: line-through;
+}

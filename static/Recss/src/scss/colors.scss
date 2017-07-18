@@ -1,0 +1,33 @@
+@import 'vars';
+
+@each $color-name, $color-hex in $colors {
+  .bg--#{$color-name} {
+    background-color: #{$color-hex};
+  }
+
+  .bg--hover--#{$color-name} {
+    &:hover {
+      background-color: #{$color-hex};
+    }
+  }
+
+  .t--#{$color-name} {
+    color: #{$color-hex};
+  }
+
+  .t--hover--#{$color-name} {
+    &:hover {
+      color: #{$color-hex};
+    }
+  }
+
+  .b--#{$color-name} {
+    border-color: #{$color-hex};
+  }
+
+  .b--hover--#{$color-name} {
+    &:hover {
+      border-color: #{$color-hex};
+    }
+  }
+}

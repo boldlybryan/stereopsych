@@ -1,0 +1,175 @@
+@import 'vars';
+
+.flex {
+  display: flex;
+}
+
+.fxc {
+  flex-direction: column;
+}
+
+.fxr {
+  flex-direction: row;
+}
+
+.fxw {
+  flex-wrap: wrap;
+}
+
+.fxnw {
+  flex-wrap: nowrap;
+}
+
+.jcfs {
+  justify-content: flex-start;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.jcfe {
+  justify-content: flex-end;
+}
+
+.jcsa {
+  justify-content: space-around;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+.aifs {
+  align-items: flex-start;
+}
+
+.aic {
+  align-items: center;
+}
+
+.aife {
+  align-items: flex-end;
+}
+
+.ais {
+  align-items: stretch;
+}
+
+.aib {
+  align-items: baseline;
+}
+
+.1st {
+  order: -1;
+}
+
+.2nd {
+  order: 1;
+}
+
+.3rd {
+  order: 2;
+}
+
+.nth {
+  order: 99;
+}
+
+.fxg1 {
+  flex-grow: 1;
+}
+
+.fxg2 {
+  flex-grow: 2;
+}
+
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+
+	@media (min-width: $breakpoint-value){
+    .flex--#{$breakpoint-name} {
+      display: flex;
+    }
+
+    .fxc--#{$breakpoint-name} {
+      flex-direction: column;
+    }
+
+    .fxr--#{$breakpoint-name} {
+      flex-direction: row;
+    }
+
+    .fxw--#{$breakpoint-name} {
+      flex-wrap: wrap;
+    }
+
+    .fxnw--#{$breakpoint-name} {
+      flex-wrap: nowrap;
+    }
+
+    .jcfs--#{$breakpoint-name} {
+      justify-content: flex-start;
+    }
+
+    .jcc--#{$breakpoint-name} {
+      justify-content: center;
+    }
+
+    .jcfe--#{$breakpoint-name} {
+      justify-content: flex-end;
+    }
+
+    .jcsa--#{$breakpoint-name} {
+      justify-content: space-around;
+    }
+
+    .jcsb--#{$breakpoint-name} {
+      justify-content: space-between;
+    }
+
+    .aifs--#{$breakpoint-name} {
+      align-items: flex-start;
+    }
+
+    .aic--#{$breakpoint-name} {
+      align-items: center;
+    }
+
+    .aife--#{$breakpoint-name} {
+      align-items: flex-end;
+    }
+
+    .ais--#{$breakpoint-name} {
+      align-items: stretch;
+    }
+
+    .aib--#{$breakpoint-name} {
+      align-items: baseline;
+    }
+
+    .1st--#{$breakpoint-name} {
+      order: -1;
+    }
+
+    .2nd--#{$breakpoint-name} {
+      order: 1;
+    }
+
+    .3rd--#{$breakpoint-name} {
+      order: 2;
+    }
+
+    .nth--#{$breakpoint-name} {
+      order: 99;
+    }
+
+    .fxg1--#{$breakpoint-name} {
+      flex-grow: 1;
+    }
+
+    .fxg2--#{$breakpoint-name} {
+      flex-grow: 2;
+    }
+  }
+
+}

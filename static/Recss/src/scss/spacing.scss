@@ -1,0 +1,126 @@
+@import 'vars';
+
+@for $i from 0 through $qty-spacing-classes {
+  .pa#{$i} {
+    padding: $spacing;
+  }
+
+  .px#{$i} {
+    padding-left: $spacing * $i;
+    padding-right: $spacing * $i;
+  }
+
+  .py#{$i} {
+    padding-top: $spacing * $i;
+    padding-bottom: $spacing * $i;
+  }
+
+  .pt#{$i} {
+    padding-top: $spacing * $i;
+  }
+
+  .pr#{$i} {
+    padding-right: $spacing * $i;
+  }
+
+  .pb#{$i} {
+    padding-bottom: $spacing * $i;
+  }
+
+  .pl#{$i} {
+    padding-left: $spacing * $i;
+  }
+
+  .ma#{$i} {
+    margin: $spacing * $i;
+  }
+
+  .mx#{$i} {
+    margin-left: $spacing * $i;
+    margin-right: $spacing * $i;
+  }
+
+  .my#{$i} {
+    margin-top: $spacing * $i;
+    margin-bottom: $spacing * $i;
+  }
+
+  .mt#{$i} {
+    margin-top: $spacing * $i;
+  }
+
+  .mr#{$i} {
+    margin-right: $spacing * $i;
+  }
+
+  .mb#{$i} {
+    margin-bottom: $spacing * $i;
+  }
+
+  .ml#{$i} {
+    margin-left: $spacing * $i;
+  }
+
+  @each $breakpoint-name, $breakpoint-value in $breakpoints {
+    .pa#{$i}--#{$breakpoint-name} {
+      padding: $spacing;
+    }
+
+    .px#{$i}--#{$breakpoint-name} {
+      padding-left: $spacing * $i;
+      padding-right: $spacing * $i;
+    }
+
+    .py#{$i}--#{$breakpoint-name} {
+      padding-top: $spacing * $i;
+      padding-bottom: $spacing * $i;
+    }
+
+    .pt#{$i}--#{$breakpoint-name} {
+      padding-top: $spacing * $i;
+    }
+
+    .pr#{$i}--#{$breakpoint-name} {
+      padding-right: $spacing * $i;
+    }
+
+    .pb#{$i}--#{$breakpoint-name} {
+      padding-bottom: $spacing * $i;
+    }
+
+    .pl#{$i}--#{$breakpoint-name} {
+      padding-left: $spacing * $i;
+    }
+
+    .ma#{$i}--#{$breakpoint-name} {
+      margin: $spacing * $i;
+    }
+
+    .mx#{$i}--#{$breakpoint-name} {
+      margin-left: $spacing * $i;
+      margin-right: $spacing * $i;
+    }
+
+    .my#{$i}--#{$breakpoint-name} {
+      margin-top: $spacing * $i;
+      margin-bottom: $spacing * $i;
+    }
+
+    .mt#{$i}--#{$breakpoint-name} {
+      margin-top: $spacing * $i;
+    }
+
+    .mr#{$i}--#{$breakpoint-name} {
+      margin-right: $spacing * $i;
+    }
+
+    .mb#{$i}--#{$breakpoint-name} {
+      margin-bottom: $spacing * $i;
+    }
+
+    .ml#{$i}--#{$breakpoint-name} {
+      margin-left: $spacing * $i;
+    }
+  }
+
+}
