@@ -1,0 +1,33 @@
+.ba {
+  border-style: solid;
+}
+
+.bt {
+  border-top-style: solid;
+}
+
+.br {
+  border-right-style: solid;
+}
+
+.bb {
+  border-bottom-style: solid;
+}
+
+.bl {
+  border-left-style: solid;
+}
+
+@for $i from 1 through 4 {
+  .bw#{$i} {
+    border-width: $i * 0.0625em;
+  }
+
+  .br#{$i} {
+    border-radius: $i * 0.25em;
+  }
+}
+
+.br100 {
+  border-radius: 100px;
+}
