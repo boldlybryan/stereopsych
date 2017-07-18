@@ -28,3 +28,6 @@ npm test
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## Recss
+This site uses the CSS library Recss. The GitHub repo for the project has been cloned into /static. The library is built using gulp. The default command ```gulp``` watches for changes to scss files, while ```gulp sassify``` will force the process to run.

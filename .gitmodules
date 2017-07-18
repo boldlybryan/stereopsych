@@ -1,0 +1,3 @@
+[submodule "static/Recss"]
+	path = static/Recss
+	url = https://github.com/brykng/Recss.git
