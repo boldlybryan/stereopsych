@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div v-for="episode in feed">
-      {{ episode.published_at | formatDate }}
-      <br>
-   	  {{ episode.title }}
-   	  <br />
-   	  {{ episode.description}}
-   	  <br />
-      <a :href="episode.audio_url" download>Download</a>
-   	</div>
+    <div v-for="episode in feed" class="bb bw1 b--silver">
+      <date class="t-up">{{ episode.published_at | formatDate }}</date>
+      <h2 class="my1">{{ episode.title }}</h2>
+      <p class="ma0">{{ episode.description}}</p>
+      <div class="pt2">
+        <a href="" class="t--black mr2">Play</a>
+        <a :href="episode.audio_url" class="t--black" download>Download</a>
+      </div>
+    </div>
   </div>
 </template>
 <script>
