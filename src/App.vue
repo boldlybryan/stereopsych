@@ -1,30 +1,19 @@
 <template>
   <div id="app">
     <heroBanner></heroBanner>
-    <div class="container">
-    	<div class="grid--fixed">
-    		<div class="col__100 col__33--lg">
-          <episodePreview></episodePreview>
-      	</div>
-        <div class="col__100 col__66--lg">
-          <showNotes></showNotes>
-        </div>
-      </div>
-    </div>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import episodePreview from './components/episodePreview'
 import heroBanner from './components/heroBanner'
-import showNotes from './components/showNotes'
+import episode from './components/episode'
 
 export default {
   name: 'app',
   components: {
-    episodePreview,
     heroBanner,
-    showNotes
+    episode
   }
 }
 </script>

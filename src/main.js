@@ -2,8 +2,9 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import VueResource from 'vue-resource'
-import moment from 'moment'
 import App from './App'
+import router from './router'
+import moment from 'moment'
 
 Vue.config.productionTip = false
 Vue.use(VueResource)
@@ -16,6 +17,7 @@ Vue.filter('formatDate', function (value) {
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  router,
   template: '<App/>',
   components: { App }
 })

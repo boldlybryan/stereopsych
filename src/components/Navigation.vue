@@ -1,7 +1,15 @@
 <template>
   <nav class="navbar flex fxw jcsb aic container pt2">
-		<button v-on:click="toggleNav()">Menu</button>
-		<button class="bg--teal bg--hover--white t--white t--hover--black t-up b--white ba br2 py1 px3"><strong>Subscribe</strong></button>
+		<button v-on:click="toggleNav()" class="hide--md">Menu</button>
+    <ul class="hide flex--md">
+      <li>
+        <router-link to="episodes">Episodes</router-link>
+        <router-link to="about">About</router-link>
+        <a href="http://stereopsych.com">Blog</a>
+        <router-link to="contact">Contact</router-link>
+      </li>
+    </ul>
+		<router-link to="subscribe" class="bg--teal bg--hover--white t--white t--hover--black t-up t-nund b--white ba br2 py1 px3">Subscribe</router-link>
 	</nav>
 </template>
 <script>
@@ -9,7 +17,10 @@
     name: 'navigation',
     data: {},
     methods: {
-      toggleNav: function () {}
+      toggleNav: function () {
+        var navbar = document.querySelector('.navbar ul')
+        navbar.classList.toggle('hide')
+      }
     }
   }
 </script>
