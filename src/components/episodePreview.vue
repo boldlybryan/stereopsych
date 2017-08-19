@@ -6,7 +6,7 @@
         <h2 class="my1">{{ episode.title }}</h2>
         <p class="ma0">{{ episode.description}}</p>
         <div class="pt2">
-          <a href="" class="t--black mr2">Play</a>
+          <a :href="'episodes/' + episode.id" class="t--black mr2">Play</a>
           <a :href="episode.audio_url" class="t--black" download>Download</a>
         </div>
       </div>

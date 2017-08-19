@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <heroBanner></heroBanner>
-    <router-view></router-view>
+    <div class="container">
+      <div class="grid--fixed">
+        <router-view></router-view>
+      </div>
+    </div>
   </div>
 </template>
 

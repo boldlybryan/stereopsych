@@ -1,9 +1,14 @@
 <template>
-  <div class="pl4--lg pt2--lg">
-	  <h3 class="t4 ma0">Show notes</h3>
-    <p v-for="episode in feed">
-      {{ episode.long_description }}
-    </p>
+  <div class="col__100">
+    <div class="pt2--lg">
+      <audio v-bind:src="episode.audio_url" controls>
+        Your browser does not support the <code>audio</code> element.
+      </audio>
+  	  <h3 class="t4 ma0">Show notes</h3>
+      <p>
+        {{ episode.long_description }}
+      </p>
+    </div>
   </div>
 </template>
 <script>
@@ -14,25 +19,29 @@ export default {
   name: 'showNotes',
   data () {
     return {
-      feed: ''
+      episode: ''
     }
   },
   methods: {
-    loadFeed: function () {
+    loadEpisode: function () {
       // GET /someUrl
-      this.$http.get(podcastURL + '/' + podcastID + '/' + 'episodes.json?api_key=' + apiKey).then(response => {
+      var episodeId = this.$route.params.id
+      this.$http.get(podcastURL + '/' + podcastID + '/episodes/' + episodeId + '.json?api_key=' + apiKey).then(response => {
         // get body data
-        this.feed = response.body
-        console.log(response.body)
+        this.episode = response.body
       }, response => {
         // error callback
       })
     }
   },
   created: function () {
-    this.loadFeed()
+    this.loadEpisode()
   }
 }
 </script>
 <style scoped>
+audio {
+  width: 100%;
+  background-color: transparent;
+}
 </style>

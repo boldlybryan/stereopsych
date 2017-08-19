@@ -1,7 +1,7 @@
 <template>
   <header class="bg--teal t--white">
     <navigation></navigation>
-    <div class="tc pt8 pb5">
+    <div class="tc py5 mx1">
       <h1 class="t6 t7--lg ma0">{{ info.title }}</h1>
       <p class="t2 t3--lg mb0">{{ info.description }}</p>
     </div>

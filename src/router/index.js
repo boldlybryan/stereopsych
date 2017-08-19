@@ -4,6 +4,7 @@ import episode from '@/components/episode'
 import about from '@/components/about'
 import subscribe from '@/components/subscribe'
 import contact from '@/components/contact'
+import showNotes from '@/components/showNotes'
 
 Vue.use(VueRouter)
 
@@ -17,6 +18,10 @@ export default new VueRouter({
     {
       path: '/episodes',
       component: episode
+    },
+    {
+      path: '/episodes/:id',
+      component: showNotes
     },
     {
       path: '/about',
